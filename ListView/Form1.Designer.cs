@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.lvView = new System.Windows.Forms.ListView();
+            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chWork = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblName = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblWork = new System.Windows.Forms.Label();
@@ -36,9 +39,6 @@
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtWork = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chWork = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lvView
@@ -55,33 +55,49 @@
             this.lvView.TabIndex = 0;
             this.lvView.UseCompatibleStateImageBehavior = false;
             this.lvView.View = System.Windows.Forms.View.Details;
+            this.lvView.Click += new System.EventHandler(this.LvView_Click);
+            // 
+            // chName
+            // 
+            this.chName.Text = "이름";
+            this.chName.Width = 100;
+            // 
+            // chAge
+            // 
+            this.chAge.Text = "나이";
+            this.chAge.Width = 100;
+            // 
+            // chWork
+            // 
+            this.chWork.Text = "직업";
+            this.chWork.Width = 100;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(11, 167);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 12);
+            this.lblName.Size = new System.Drawing.Size(29, 12);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "label1";
+            this.lblName.Text = "이름";
             // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(11, 195);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(38, 12);
+            this.lblAge.Size = new System.Drawing.Size(29, 12);
             this.lblAge.TabIndex = 2;
-            this.lblAge.Text = "label2";
+            this.lblAge.Text = "나이";
             // 
             // lblWork
             // 
             this.lblWork.AutoSize = true;
             this.lblWork.Location = new System.Drawing.Point(11, 223);
             this.lblWork.Name = "lblWork";
-            this.lblWork.Size = new System.Drawing.Size(38, 12);
+            this.lblWork.Size = new System.Drawing.Size(29, 12);
             this.lblWork.TabIndex = 3;
-            this.lblWork.Text = "label3";
+            this.lblWork.Text = "직업";
             // 
             // txtName
             // 
@@ -112,21 +128,7 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // chName
-            // 
-            this.chName.Text = "이름";
-            this.chName.Width = 100;
-            // 
-            // chAge
-            // 
-            this.chAge.Text = "나이";
-            this.chAge.Width = 100;
-            // 
-            // chWork
-            // 
-            this.chWork.Text = "직업";
-            this.chWork.Width = 100;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Form1
             // 
